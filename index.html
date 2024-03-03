@@ -4,163 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fasih-Nasir</title>
+  <style>
+    button{
+      background-color: rgb(15, 59, 74);
+      color: white;
+      padding: 10px;
+      border: 1px solid white;
+      border-radius: 5px;
+      transition: 0.5s ease;
+    }
+    button:hover{
+      transform: scale(1.1);
+      background-color: white;
+      color: rgb(15, 59, 74);;
+      border: 1px solid rgb(15, 59, 74);;
+    }
+  </style>
 </head>
 <body>
- 
-    <script>
-      var num1 = 3;
-    var num2 = 5;
-// add
+  <button onclick="add()">Ques:1=Addition</button><br>
+  <button onclick="sub()">Ques:2=Subtract</button><br>
+  <button onclick="divi()">Ques:2=Divison</button><br>
+  <button onclick="modu()">Ques:2=Modulus</button><br>
+  <button onclick="movie()">Ques:4=Movie Ticket</button><br>
+<button onclick="tabl()">Ques:5=Table</button><br>
+<button onclick="c()">Ques:6=Cent TO Faren</button><br>
+<button onclick="f()">Ques:6=Faren TO Cent</button><br>
+<button onclick="mak()">Ques:8=Marksheet</button><br>
+<button onclick="us()">Ques:9=US to PK</button><br>
+<button onclick="sa()">Ques:9=SA to PK</button><br>
+<button onclick="agecla()" >Qes:11=Age Calculator</button><br>
+<button onclick="age()" >Qes:13=Supply Calculator</button>
+<script>
+  // q1
 
-var add= num1 +num2;
-    // Sub
-    var  difference = num1- num2;
+ function add(){
+  var num1=+prompt("Enter Any Value");
+  var num2=+prompt("Enter Any Value");
+  var res=num1+num2;
+  document.write("The Sum OF "+ num1+" + "+ +num2+" is "+ res)
+ }
+// q2
+function sub(){
+  var num1=+prompt("Enter Any Value");
+  var num2=+prompt("Enter Any Value");
+  var res=num1-num2;
+  document.write("The Subtraction OF "+ num1+" - "+ +num2+" is "+ res)
 
-    // Multiply
-     var product = num1 * num2;
+}
+function divi(){
+  var num1=+prompt("Enter Any Value");
+  var num2=+prompt("Enter Any Value");
+  var res=num1/num2;
+  document.write("The Divison OF "+ num1+" / "+ +num2+" is "+ res)
 
-    // Dividw
-    var quotient = num1 / num2;
+}
+function modu(){
+  var num1=+prompt("Enter Any Value");
+  var num2=+prompt("Enter Any Value");
+  var res4= num1%num2;
+  document.write("The Modulus OF "+ num1+" % "+ +num2+" is "+ res4)
 
-    // Modlus (Remaind)
-  var remainder = num1 % num2;
-  document.write("<p>add: " + num1 + " + " + num2 + " = " +add + "</p>");
-    document.write("<p>Subtraction: " + num1 + " - " + num2 + " = " + difference + "</p>");
-      document.write("<p>Multiplication: " + num1 + " * " + num2 + " = " + product + "</p>");
-     document.write("<p>Division: " + num1 + " / " + num2 + " = " + quotient + "</p>");
-       document.write("<p>Modulus: " + num1 + " % " + num2 + " = " + remainder + "</p>");
+}
 
+  // q3
+  document.write("<h2>Ques:3. Do the following using JS Mathematic Expressions</h2>")
+var q3;
+document.write("Value after variable declaration is:" + q3+"<br>")
+q3=7;
+document.write("Initial value is:"  + q3   +"<br>")
+q3++;
+document.write("Value after increment is:" + q3 +"<br>")
+document.write("Value after addition is:" + (q3+7)+"<br>")
+q3--
+document.write("Value after decrement is:" + q3 +"<br>")
+document.write("The Reminder is:" + q3%7 +"<br>")
 
-       var myVariable;
+function movie(){
+var ticket=prompt("Ticket Price");
+var tq=prompt("Ticket Quantity")
+document.write("Total Cost of buying " + tq +" ticket Price is " + ticket*tq +"PKR")
+}
 
-document.write("<p>Value after variable declaration is: " + myVariable + "</p>");
+function tabl(){
+  var tnum=prompt("ENTER ANY TABLE")
+document.write(tnum+ "* 1 =" + tnum*1+"<br>")
+document.write(tnum+ "* 2 =" + tnum*2+"<br>")
+document.write(tnum+ "* 3 =" + tnum*3+"<br>")
+document.write(tnum+ "* 4 =" + tnum*4+"<br>")
+document.write(tnum+ "* 5 =" + tnum*5+"<br>")
+document.write(tnum+ "* 6 =" + tnum*6+"<br>")
+document.write(tnum+ "* 7 =" + tnum*7+"<br>")
+document.write(tnum+ "* 8 =" + tnum*8+"<br>")
+document.write(tnum+ "* 9 =" + tnum*9+"<br>")
+document.write(tnum+ "* 10 =" + tnum*10+"<br>")
+}
 
-myVariable = 5;
+function c(){
+var ct=prompt("Centigrade Value");
+var ft=(ct *9/5)+32;
+document.write(ct +"c" + " ➡ " + ft+"f"+"<br>")
+}
+function f(){
+var ft2=prompt("Fahrenheit");
+var ct2=(ft2 -32)*5/9;
+document.write(ft2 +"f" +" ➡ "+ ct2 +"c");
+}
+document.write("<h2>Ques:7.Write a program to implement checkout process of a shopping cart system for an e-commerce website. Store the following in variables</h2>")
+var price1=650;
+var quantity1= 3;
+var price2=100;
+var quantity2=7;
+var scharges=100;
 
+document.write("Price of Item 1>" + price1 +"<br>")
+document.write("Price of Item 2>" + price2 +"<br>")
+document.write("Quantity of Item is 1>" + quantity1 +"<br>")
+document.write("Quantity of Item is 2>" + quantity2 +"<br>")
+document.write("shipping charges >" + scharges +"<br>")
+document.write("Total Cost Of Order is >" + (price1*3 + price2*7 +quantity1+quantity2+scharges) )
 
-document.write("<p>Initial value: " + myVariable + "</p>");
+function us(){
+var us=prompt("US DOLLAR TO PAK");
+var pa=273.2;
+var cur=pa*us;
+document.write(cur + " Rs ")
+}
+function sa(){
+var us=prompt("SA DOLLAR TO PAK");
+var pa=74.22;
+var cur=pa*us;
+document.write(cur + " Rs ")
+}
+function mak(){
+var totalnum=prompt("Marks");
+var markobt=prompt("Total Num");
+var resofres=totalnum *100 / markobt;
+document.write(resofres +"%")
+}
+// document.write("<h2>Ques:9.The Lifetime Supply Calculator: Ever wonder how much a “lifetime supply” of your favorite snack is? Wonder no more.</h2>")
+function age(){
+var username=prompt("Enter Your Name");
+var myage=+prompt("ENTER YOUR AGE");
+var maxage=+prompt("ENTER YOUR MAX-AGE");
+var perday=+prompt("ENTER YOUR PER DAY" );
 
-
-myVariable++;
-
-
-
-
-
-document.write("<p>Value after addition is: " + myVariable + "</p>");
-
-myVariable--;
-
-
-
-
-document.write("<p>The remainder is: " + remainder + "</p>");
-
-
-var ticketPrice = 600;
-
-
-var numberOfTickets = 5;
-
-var totalCost = ticketPrice * numberOfTickets;
-
-
-document.write("<p>The cost of buying " + numberOfTickets + " movie tickets is: " + totalCost + " PKR</p>");
-
-
-document.write("<h1>Table oF 7</h1>");
-var n=7;
-var t1=1;
-var t2=2;
-var t3=3;
-var t4=4;
-var t5=5;
-var t6=6;
-var t7=7;
-var t8=8;
-var t9=9;
-var t10=10;
-
-// var fn=n*t1;
-var fn1=n*t1;
-var fn2=n*t2;
-var fn3=n*t3;
-var fn4=n*t4;
-var fn5=n*t5;
-var fn6=n*t6;
-var fn7=n*t7;
-var fn8=n*t8;
-var fn9=n*t9;
-var fn10=n*t10;
-
-
-
-document.write(n + "*" , t1 +"=",fn1)
-document.write("<br>")
-document.write(n + "*" , t2 +"=",fn2)
-document.write("<br>")
-document.write(n + "*" , t3 +"=",fn3)
-
-document.write("<br>")
-document.write(n + "*" , t4 +"=",fn4)
-
-document.write("<br>")
-document.write(n + "*" , t5 +"=",fn5)
-
-document.write("<br>")
-document.write(n + "*" , t6 +"=",fn6)
-
-document.write("<br>")
-document.write(n + "*" , t7 +"=",fn7)
-
-document.write("<br>")
-document.write(n + "*" , t8 +"=",fn8)
-
-document.write("<br>")
-document.write(n + "*" , t9 +"=",fn9)
-
-document.write("<br>")
-document.write(n + "*" , t10 +"=",fn10)
-
-
-  var cT = 30;
-
-
-var fT = (cT * 9/5) + 32;
-document.write("<p>" + cT + "&#8451; is " + fT + "&#8457;</p>");
-
-var fT2 = 86;
-
-
-var cT2 = (fT2 - 32) * 5/9;
-document.write("<p>" + fT2 + "&#8457; is " + cT2 + "&#8451;</p>");
-
-
-var priceItem1 = 500;
-
-
-var priceItem2 = 700;
-
-
-var quantityItem1 = 2;
-
-
-var quantityItem2 = 3;
-
-
-var shippingCharges = 50;
-
-
-var totalCost = (priceItem1 * quantityItem1) + (priceItem2 * quantityItem2) + shippingCharges;
-
-
-document.write("<h2>Shopping Cart Receipt</h2>");
-document.write("<p>Price of Item 1: " + priceItem1 + " PKR</p>");
-document.write("<p>Quantity of Item 1: " + quantityItem1 + "</p>");
-document.write("<p>Price of Item 2: " + priceItem2 + " PKR</p>");
-document.write("<p>Quantity of Item 2: " + quantityItem2 + "</p>");
-document.write("<p>Shipping Charges: " + shippingCharges + " PKR</p>");
-document.write("<p><strong>Total Cost: " + totalCost + " PKR</strong></p>");
+document.write(" Dear " + username +" You Eat " + (maxage - myage) * perday  +" Samosa Untill Your Age is " + maxage);
+}
+function agecla()
+{
+  var dob=prompt("Enter Your Birth Year");
+  var coy=prompt("Enter Current Year");
+var tage=coy-dob;
+document.write("Your Age is ="+ tage);
+}
+// age()
 </script>
 </body>
 </html>
+
